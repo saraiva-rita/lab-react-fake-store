@@ -1,6 +1,6 @@
-import logo from "./../assets/logo-ironhack-blue.png";
-import cart from "./../assets/cart.png";
-import { Link } from "react-router-dom";
+import logo from './../assets/logo-ironhack-blue.png';
+import cart from './../assets/cart.png';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
@@ -18,8 +18,18 @@ function Navbar() {
           <span className="text-xl">React Fake Store</span>
         </div>
 
+        <div className="categories">
+          <ul>
+            <li>Men</li>
+            <li>Women</li>
+            <li>Jewelery</li>
+            <li>Electronics</li>
+          </ul>
+        </div>
+
         <div className="w-1/4 flex justify-end mr-4">
           {/* User Profile Button */}
+          <Link to="/cart">
             <button className="flex items-center text-l py-1">
               <img
                 src={cart}
@@ -27,6 +37,7 @@ function Navbar() {
                 className="h-10 w-auto border-solid border border-white rounded-3xl p-1"
               />
             </button>
+          </Link>
         </div>
       </div>
     </nav>

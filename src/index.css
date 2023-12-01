@@ -8,10 +8,10 @@
 
 /* Colors */
 :root {
-    --primary-color: #1E40AF;
-    --secondary-color: #3B82F6;
-    --background-color: #F3F4F6;
-    --text-color: #111827;
+  --primary-color: #1e40af;
+  --secondary-color: #3b82f6;
+  --background-color: #f3f4f6;
+  --text-color: #111827;
 }
 
 /* Base styles */
@@ -21,7 +21,7 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
   color: #111827;
   margin: 0;
   background-color: var(--background-color);
@@ -65,11 +65,21 @@ nav {
   z-index: 20;
 }
 
-
 .Navbar li {
   list-style: none;
   font-size: 1.7rem;
   font-weight: 600;
+}
+.categories ul {
+  display: flex;
+}
+.categories ul li {
+  padding: 0 20px;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -80,4 +90,26 @@ nav {
   margin-bottom: 20px;
   background: #94a7c8;
   border-radius: 4px;
+}
+.card img {
+  width: 60%;
+}
+.hero-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+.hero-container img {
+  width: 100%;
+  height: 90vh;
+  display: block;
+  opacity: 0.8;
+}
+.hero-container h1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #5c5c5c;
+  font-size: 5rem;
+  z-index: 1;
 }
