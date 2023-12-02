@@ -17,21 +17,23 @@ function ProductListPage() {
 
   return (
     <div className="ProductListPage">
-      <div className="hero-container">
-        <img src="./images/store.jpg" alt="store" />
-        <h1>New Season Arrivals</h1>
-      </div>
-      <div className="items">
+      <div className="items container">
         {products.map((product) => {
           return (
             <div className="card" key={product._id}>
-              <img src={product.image} alt={product.title} />
-              <Link to={`/product/details/${product.id}`}>
-                <h2>{product.title}</h2>
-              </Link>
-              <p>{product.category}</p>
-              <p>{product.price}</p>
-              <p>{product.description}</p>
+              <div className="card__img">
+                <Link to={`/product/details/${product.id}`}>
+                  <img src={product.image} alt={product.title} />
+                </Link>
+              </div>
+              <div className="card__info">
+                <Link to={`/product/details/${product.id}`}>
+                  <h2>{product.title}</h2>
+                </Link>
+                <p>{product.category}</p>
+                {/* <p>{product.price}</p> */}
+                {/* <p>{product.description}</p> */}
+              </div>
             </div>
           );
         })}

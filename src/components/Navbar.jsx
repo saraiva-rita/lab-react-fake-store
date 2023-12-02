@@ -18,15 +18,6 @@ function Navbar() {
           <span className="text-xl">React Fake Store</span>
         </div>
 
-        <div className="categories">
-          <ul>
-            <li>Men</li>
-            <li>Women</li>
-            <li>Jewelery</li>
-            <li>Electronics</li>
-          </ul>
-        </div>
-
         <div className="w-1/4 flex justify-end mr-4">
           {/* User Profile Button */}
           <Link to="/cart">

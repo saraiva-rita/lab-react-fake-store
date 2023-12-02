@@ -21,18 +21,24 @@ function ProductDetailsPage() {
   }, [productId]);
 
   return (
-    <div className="ProductDetailsPage">
+    <div className="ProductDetailsPage container">
       {/* Render product details here */}
       {!product && <h3>Sorry, product not found!</h3>}
       {product && (
-        <div key={product._id}>
-          <img src={product.image} alt={product.title} />
-          <h2>{product.title}</h2>
-          <p>{product.category}</p>
-          <p>{product.price}</p>
-          <p>{product.description}</p>
+        <div className="product" key={product._id}>
+          <div className="product__img">
+            <img src={product.image} alt={product.title} />
+          </div>
+          <br />
+          <div className="product__info">
+            <h2>{product.title}</h2>
+            <p>{product.category}</p>
+            <p>{product.price}</p>
+            <p>{product.description}</p>
+          </div>
         </div>
       )}
+      <br />
       <Link to="/" className="btn-primary">
         Back
       </Link>
